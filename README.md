@@ -1,34 +1,12 @@
-name: Generate arcade animation
+# 💫 About Me:
+estudante <br>
 
-on:
-  schedule: # execute every 12 hours
-    - cron: "* */12 * * *"
+# 📊 GitHub Stats:
+![](https://github-readme-stats.shion.dev/api?username=trabalhosifpi&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
+![](https://streak-stats.demolab.com/?user=trabalhosifpi&theme=dark&hide_border=false)<br/>
+![](https://github-readme-stats.shion.dev/api/top-langs/?username=trabalhosifpi&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
-  workflow_dispatch:
+---
+[![](https://komarev.com/ghpvc/?username=trabalhosifpi&icon=0&color=0)](https://visitcount.itsvg.in)
 
-  push:
-    branches:
-    - main
-
-jobs:
-  generate:
-    permissions:
-      contents: write
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-
-    steps:
-      - name: generate pacman-contribution-graph.svg
-        uses: abozanona/pacman-contribution-graph@main
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          games: 'pacman'
-
-
-      - name: push pacman-contribution-graph.svg to the output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: pacman-output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
